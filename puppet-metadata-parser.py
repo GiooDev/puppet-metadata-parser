@@ -12,7 +12,7 @@ values = json.loads(json_data)
 print 'Informations :'
 print '  Name:         '+values['name']
 print '  Version:      '+values['version']
-print '  Author:       '+values['name']
+print '  Author:       '+values['author']
 print '  Summary:      '+values['summary']
 print '  Description:  '+values['description']
 print
@@ -25,8 +25,8 @@ print '  Issues url:   '+values['issues_url']
 print '\nPackage name :'
 print '  '+pkg_prefix+values['name']+'-'+values['version']
 
-print '\nSupported Operating Systems :'
 # Supporting operating system
+print '\nSupported Operating Systems :'
 for i in range(0, len(values['operatingsystem_support'])) :
   print '  '+values['operatingsystem_support'][i]['operatingsystem']+' ('+', '.join(values['operatingsystem_support'][i]['operatingsystemrelease'])+')'
 
