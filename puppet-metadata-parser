@@ -1,4 +1,11 @@
 #!/usr/bin/python
+# -*- coding: utf8 -*-
+"""
+Author : Julien Georges
+Project : https://github.com/GiooDev/puppet-metadata-parser
+Date : October 2014
+Description : The script print the informations of metadata.json files (puppet modules).
+"""
 import json
 
 # Configuration
@@ -35,4 +42,3 @@ for i in range(0, len(values['dependencies'])) :
 print '\nRequirements :'
 for i in range(0, len(values['requirements'])) :
   print '  '+values['requirements'][i]['name']+' '+values['requirements'][i]['version_requirement']
-
